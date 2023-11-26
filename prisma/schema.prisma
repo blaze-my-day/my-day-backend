@@ -38,6 +38,8 @@ model Log {
 
   userId Int
   user   User @relation(fields: [userId], references: [id])
+  // TODO use onDelete and run migrations again
+  // user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("logs")
 }

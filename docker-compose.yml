@@ -12,5 +12,17 @@ services:
       POSTGRES_DB: myday
     networks:
       - blaze
+  test-db:
+    image: postgres:latest
+    container_name: PostgresTestCont
+    restart: always
+    ports:
+      - 5435:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: myday
+    networks:
+      - blaze
 networks:
   blaze:
