@@ -24,7 +24,7 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
         id: payload.sub
       }
     });
-    //TODO Remove user hash
+    //TODO Remove hash from user
     return user;
   }
 }
